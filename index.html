@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>macbook-pro</title>
+    <style>
+        /* applied extra style using css */
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .hover-btn:hover{
+            background-color: gray;
+            color: white
+        }
+        .text-color{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="row">
+                <div class="col-lg-6 pt-1 pb-5 pe-5 d-flex justify-content-center align-items-center">
+                    <img src="images/mac.png" alt="" width="100%">
+                </div>
+                <div class="col-lg-6 pt-1 ps-5 bg-gray">
+                    <h1>Customize your blue 24-inch iMacwith Apple chip.</h1>
+                    <p class="pt-4">The new iMac (24-inch, 2021) is an improvement on its 21.5-inch predecessor in pretty much every way. It’s got a better, larger screen, a new modern and colorful design, and delivers excellent performance – all for the same price. If you’ve been eyeing up an all-in-one for work and play, this is an excellent choice. It also comes in a new size, 24 inches, which replaces the 21.5-inch iMac model (the 27-inch iMac remains on sale). Impressively, despite the larger screen size, the new iMac (24-inch, 2021) isn’t actually that much larger than the 21.5-inch model, with dimensions of 54.7 x 46.1cm and a depth of just 14.7cm (the screen itself is just 11.5mm thin), compared to its predecessor’s dimensions of 52.8 x 45cm and a depth of 17.5cm.</p>
+
+                    <!------------------- 
+                        Memory Section 
+                    -------------------->
+
+                    <section class="mt-4 pt-4">
+                        <h6>Memory</h6>
+                        <button id="memory-default" class="hover-btn ps-4 pe-4 pt-1 pb-1 rounded" type="submit">8GB Undefined memory</button>
+                        <button id="memory-extra" class="hover-btn ps-2 pe-2 pt-1 pb-1 rounded" type="submit">16GB Undefined memory</button>
+                        </section>
+                    <!---------------------------------
+                            Storage section 
+                    ---------------------------------->
+                    <section class="mt-4 pt-4">
+                        <h6>Storage</h6>
+                        <button id="ssd-default" class="hover-btn ps-2 pe-2 pt-1 pb-1 rounded" type="submit">256GB SSD storage</button>
+                        <button id="ssd-gb512" class="hover-btn ps-2 pe-2 pt-1 pb-1 rounded" type="submit">512GB SSD storage</button>
+                        <button id="ssd-tb1" class="hover-btn ps-2 pe-2 pt-1 pb-1 rounded" type="submit">1TB SSD storage</button>
+                    </section>
+                    <!------------------------ 
+                        choose delivery option
+                     ------------------------->
+                    <section class="mt-4 pt-4">
+                        <h6>Choose your delivery option</h6>
+                        <button id="free-delivery" class="hover-btn ps-2 pe-2 pt-1 pb-1 rounded" type="submit">Friday, Aug 25 FREE Prime Delivery</button>
+                        <button id="delivery-cost" class="hover-btn ps-2 pe-2 pt-1 pb-1 rounded" type="submit">Friday, Aug 21 Delivery Charge $20</button>
+                    </section>
+                    
+                    <!-------------------------
+                         Cash Memo 
+                    --------------------------->
+                    <section class="mt-4 pt-4 pb-4">
+                        <table class="p-4 pb-4">
+                            <tr>
+                              <td class="pb-2 pe-4"><strong>Best Price</strong></td>                         
+                              <td class="pb-2 ps-4"><strong>$<span id="best-price">1299</span></strong></td>
+                            </tr>
+                            <tr>
+                              <td class="pb-2 pe-4"><strong>Extra Memory Cost</strong></td>                
+                              <td class="pb-2 ps-4"><strong>$<span id="memory-cost">0</span></strong></td>
+                            </tr>
+                            <tr>
+                                <td class="pb-2 pe-4"><strong>Extra storage Cost</strong></td>                
+                                <td class="pb-2 ps-4"><strong>$<span id="storage-cost">0</span></strong></td>
+                            </tr>
+                            <tr>
+                                <td class="border-bottom pb-2 pe-4"><strong>Delivery Charge</strong></td>                
+                                <td class="border-bottom pb-2 ps-4"><strong>$<span id="delivery-charge">0</span></strong></td>
+                            </tr>
+                            <tr>
+                                <td class="pe-4"><strong>Total Price</strong></td>                
+                                <td class="ps-4"><strong>$<span id="total-price">1299</span></strong></td>
+                            </tr>
+                          </table>
+                    </section>
+                    <!-- apply coupon to get 20% discount -->
+                    <section class="pb-4">
+                        <h6>add promo code</h6>
+                        <input id="apply-coupon" class="ps-2 pt-1 pb-1 rounded" type="text" placeholder="Apply coupon here">
+                        <button id="submit-coupon" class="hover-btn bg-danger ps-4 pe-4 pt-1 pb-1 rounded" type="submit">Apply</button>
+                    </section>
+                    <p id="message" class="text-color"></p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--------------------------------------------------------------
+        display coupon message, either it is done successfully or failed 
+        ---------------------------------------------------------------->
+
+        
+    </main>
+    <hr>
+    <!-- display total price -->
+    <p class="text-center"><strong>Total: $<span id="discount-price">1299</strong></span></p>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
